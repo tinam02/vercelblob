@@ -32,8 +32,8 @@ export async function sendData( ) {
       }),
     });
 
-    const responseData = await response.blob();
-    
+    const responseData = await response.blob();var blob = new Blob([responseData], { type: 'image/jpeg' });
+    console.log('dsfsdf',blob)
     const imageUrl = URL.createObjectURL(responseData);
     return imageUrl;
   } catch (error) {

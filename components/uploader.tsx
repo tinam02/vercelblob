@@ -47,7 +47,9 @@ export default function Uploader() {
         console.log(image, file);
         fetch('/api/upload', {
           method: 'POST',
-          headers: { 'content-type':"image/png"|| 'application/octet-stream' },
+          headers: {
+            'content-type': 'image/png' || 'application/octet-stream',
+          },
           body: file,
         }).then(async res => {
           if (res.status === 200) {
@@ -103,6 +105,7 @@ export default function Uploader() {
         });
       }}
     >
+      <img src='blob:https://vercelblob-hfuq8fkbv-tinam02.vercel.app/2bc39780-56a8-4d4e-8b5b-b9bb2bcc833f'></img>
       <div>
         <div className='space-y-1 mb-4'>
           <h2 className='text-xl font-semibold'>Upload a file</h2>
